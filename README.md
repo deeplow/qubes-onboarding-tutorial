@@ -78,6 +78,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Task 1"
       text: "Let's open the file explorer on the work qube"
+      has_ok_btn: "True"
 ```
 
 ---
@@ -229,6 +230,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Each qube is isolated"
       text: "As you can see, each qube has its own files"
+      has_ok_btn: "True"
 ```
 
 ---
@@ -264,6 +266,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Task 3"
       text: "Copy picture to the personal qube"
+      has_ok_btn: "True"
 ```
 
 ---
@@ -373,6 +376,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "File has been copied"
       text: The file lands in the folder "QubesIncoming."
+      has_ok_btn: "True"
 ```
 
 ---
@@ -389,6 +393,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Task 4 (last one)"
       text: "Shutdown these qubes. They aren't needed now"
+      has_ok_btn: "True"
 ```
 
 ---
@@ -441,6 +446,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Closing windows is not enough"
       text: "You need to shut each qube down manually when not needed"
+      has_ok_btn: "True"
 ```
 
 ---
