@@ -15,7 +15,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
    - interaction_type: "click main button"
      step: "step_2"
    - interaction_type: "click secondary button"
-     step: "exit"
+     step: "end"
   ui:
     - type: "modal"
       template: "custom_ui/step_1.ui"
