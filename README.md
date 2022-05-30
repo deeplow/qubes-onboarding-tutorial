@@ -72,7 +72,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_4"
   component: tutorial
   transitions:
-   - interaction_type: "click main button"
+   - interaction_type: "click OK"
      step: "step_16"
   ui:
     - type: "step_information"
@@ -240,7 +240,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_17"
   component: tutorial
   transitions:
-   - interaction_type: "click primary button"
+   - interaction_type: "click main button"
      step: "step_18"
   ui:
     - type: "modal"
@@ -307,7 +307,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_21"
   component: tutorial
   transitions:
-   - interaction_type: "click button"
+   - interaction_type: "click main button"
      step: "step_26"
   ui:
     - type: "modal"
