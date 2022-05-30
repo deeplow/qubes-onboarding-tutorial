@@ -387,26 +387,7 @@ Copy the file and wait for the qrexec agent to open
 ```
 ---
 
-
 ![](step_images/step_23.1.png)
-
----
-
-![](step_images/step_24.png)
-
-```[disabled]yaml
-- name: "step_24"
-  transitions:
-    # wait for file to be copied
-    - interaction: "tutorial:small-time-wait"
-   #- interaction: "QubesIncoming exists in personal"
-      step: "step_26"
-  ui: False
-```
----
-
-![](step_images/step_25.png)
-
 
 (pseudo-step)
 
