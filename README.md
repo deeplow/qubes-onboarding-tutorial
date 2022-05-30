@@ -35,11 +35,11 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
    - interaction_type: "click main button"
      step: "step_3"
    - interaction_type: "click secondary button"
-     step: "start"
+     step: "step_2"
   ui:
     - type: "modal"
       title: "Compartments you start with"
-      template: "custom_ui/step_1.ui"
+      template: "custom_ui/step_2.ui"
       next_button: "I get it »"
       back_button: "‹ previous"
 ```
