@@ -252,6 +252,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       title: "Each qube is isolated"
       text: "As you can see, each qube has its own files"
       has_ok_btn: "True"
+      align_vertical: "bottom"
 ```
 
 ---
@@ -307,6 +308,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       text: "right-click » Copy To AppVM..."
       #image: "right click picture"
       has_ok_btn: "False"
+      align_vertical: "bottom"
 ```
 
 ---
@@ -383,7 +385,8 @@ Copy the file and wait for the qrexec agent to open
     - type: "step_information"
       title: "\"personal\" as target"
       text: "Select the qube to which you wish to copy"
-      has_ok_btn: "True"
+      has_ok_btn: "False"
+      align_vertical: "bottom"
 ```
 ---
 
@@ -419,6 +422,7 @@ Copy the file and wait for the qrexec agent to open
       title: "File has been copied"
       text: The file lands in the folder "QubesIncoming."
       has_ok_btn: "True"
+      align_vertical: "bottom"
 ```
 
 ---
@@ -455,6 +459,7 @@ The user closes one of the windows
       title: "close all the windows"
       text: "Now let's close it all, since we don't need it anymore"
       has_ok_btn: "False"
+      align_vertical: "bottom"
     #- type: "hotspot"
     #  location: "over work window close button"
 ```
@@ -477,6 +482,7 @@ The user closes another window
       title: "close all the windows"
       text: "Now let's close it all, since we don't need it anymore"
       has_ok_btn: "False"
+      align_vertical: "bottom"
     #- type: "hotspot"
     #  location: "over personal window close button"
 ```

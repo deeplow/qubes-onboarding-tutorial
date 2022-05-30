@@ -23,7 +23,7 @@ BuildArch: noarch
 
 BuildRequires:  make
 
-Requires:  qubes-tutorial >= 1.0.10
+Requires:  qubes-tutorial >= 1.0.11
 Requires:  qubes_menu >= 0.2.1
 Requires:  qui >= 4.1.13
 
