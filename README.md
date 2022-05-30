@@ -106,7 +106,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       app_name: "Files"
   transitions:
    - interaction: "qubes-menu:work:Files"
-     step: "step_10"
+     step: "step_9"
 ```
 
 ---
@@ -126,7 +126,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ![](step_images/step_9.png)
 
 
-```[disabled]yaml
+```yaml
 - name: "step_9"
   transitions:
    - interaction: "qubes-events:work:domain-start"
@@ -135,6 +135,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Wait for the qube to start..."
       text: "Starting a qube is like starting a computer. It takes some seconds."
+      has_ok_btn: "False"
+  #teardown:
+  #  - type: "wait" # wait for some seconds for the UI to show
+  #    time: "3"
 ```
 
 ---
@@ -184,7 +188,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       app_name: "Files"
   transitions:
    - interaction: "qubes-menu:personal:Files"
-     step: "step_16"
+     step: "step_15"
   teardown:
     - type: "qubes-menu-remove-highlight"
 
@@ -206,7 +210,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](step_images/step_15.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_15"
   transitions:
     - interaction: "qubes-events:personal:domain-start"
@@ -215,6 +219,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Wait for the qube to start"
       text: "It is now starting \"personal\""
+      has_ok_btn: "False"
+  #teardown:
+  #  - type: "wait" # wait for some seconds for the UI to show
+  #    time: "3"
 ```
 
 ---
