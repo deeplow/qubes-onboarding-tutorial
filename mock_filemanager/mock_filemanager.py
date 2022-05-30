@@ -48,6 +48,10 @@ class NautilusMock(Gtk.Window):
         self.fix_image_relative_imports()
         self.setup_dbus_service()
         self.tutorial_next_step("ui_ready")
+        self.user_interaction_allowed = False
+
+    def allow_user_interaction(self):
+        self.user_interaction_allowed = True
 
     def setup_dbus_service(self):
         print("setting up dbus servie")
@@ -56,8 +60,9 @@ class NautilusMock(Gtk.Window):
 
     @Gtk.Template.Callback()
     def on_click_picture(self, widget, event):
-        if event.button == 3: # right click
-            self.rightclickmenu.popup_at_pointer()
+        if self.user_interaction_allowed:
+            if event.button == 3: # right click
+                self.rightclickmenu.popup_at_pointer()
 
     def set_style(self):
         style_provider = Gtk.CssProvider()
@@ -128,6 +133,7 @@ class NautilusMockDBUSService(dbus.service.Object):
     @dbus.service.method('org.qubes.tutorial.mock_filemanager')
     def highlight_picture_file(self):
         self.nautilus_mock.highlight_picture()
+        self.nautilus_mock.allow_user_interaction()
 
 def main():
     NautilusMock()
