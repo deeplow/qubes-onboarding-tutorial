@@ -403,7 +403,7 @@ Copy the file and wait for the qrexec agent to open
   ui:
     - type: "step_information"
       title: "File has been copied"
-      text: The file lands in the folder "QubesIncoming."
+      text: The file lands in the folder "QubesIncoming".
       has_ok_btn: "True"
       align_vertical: "bottom"
 ```
