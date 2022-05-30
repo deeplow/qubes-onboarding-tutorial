@@ -450,7 +450,7 @@ Removed since this was merged with the previous step
 - name: "step_30"
   transitions:
    - interaction: "tutorial:next"
-     step: "end"
+     step: "step_31"
   ui:
     - type: "step_information"
       title: "Closing windows is not enough"
@@ -462,28 +462,35 @@ Removed since this was merged with the previous step
 
 ![](step_images/step_31.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_31"
+  setup:
+    - component: "qubes_domains"
+      function: "do_show_tutorial_path"
+      parameters:
+        vm_name: "personal"
+        action_name: "shutdown"
   transitions:
-   - interaction: "qubes-domains:open"
+   - interaction: "qubes_domains:open"
      step: "step_31.1"
   ui:
     - type: "step_information"
       title: "Shutdown the qubes"
       text: "Shutdown \"personal\""
-    - type: "hotspot"
-      location: "Qubes Domains widget"
+      has_ok_btn: "False"
+    #- type: "hotspot"
+    #  location: "Qubes Domains widget"
 ```
 
 ---
 
 ![](step_images/step_31.1.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_31.1"
   transitions:
    - interaction: "qubes-events:personal:domain-shutdown"
-     step: "step_31.2"
+     step: "end"
   ui:
     - type: "step_information"
       title: "Shutdown the qubes"
@@ -497,7 +504,7 @@ Removed since this was merged with the previous step
 ```[disabled]yaml
 - name: "step_32"
   transitions:
-    - interaction: "qubes-domains:open"
+    - interaction: "qubes_domains:open"
       step: "step_32.1"
   ui:
     - type: "step_information"
