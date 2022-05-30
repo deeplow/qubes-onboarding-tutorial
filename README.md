@@ -501,7 +501,7 @@ The user closes another window
   transitions:
     - interaction: "qubes_domains:open"
       step: "step_31.1"
-    - interaction: "qubes-events:personal:domain-shutdown"
+    - interaction: "qubes-events:personal:domain-pre-shutdown"
       step: "step_32"
   ui:
     - type: "step_information_pointing"
@@ -519,7 +519,7 @@ The user closes another window
 ```yaml
 - name: "step_31.1"
   transitions:
-    - interaction: "qubes-events:personal:domain-shutdown"
+    - interaction: "qubes-events:personal:domain-pre-shutdown"
       step: "step_32"
     - interaction: "qubes_domains:close"
       step: "step_31"
@@ -544,7 +544,7 @@ The user closes another window
   transitions:
     - interaction: "qubes_domains:open"
       step: "step_32.1"
-    - interaction: "qubes-events:work:domain-shutdown"
+    - interaction: "qubes-events:work:domain-pre-shutdown"
       step: "step_33"
   ui:
     - type: "step_information_pointing"
@@ -561,7 +561,7 @@ The user closes another window
 ```yaml
 - name: "step_32.1"
   transitions:
-    - interaction: "qubes-events:work:domain-shutdown"
+    - interaction: "qubes-events:work:domain-pre-shutdown"
       step: "step_33"
     - interaction: "qubes_domains:close"
       step: "step_32"
