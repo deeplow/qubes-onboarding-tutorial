@@ -290,7 +290,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   transitions:
     #- interaction: "qrexec-gui:opened"
     #  step: "step_21"
-    - interaction: "qubes-qrexec-tutorial.NextStep+copied-to-appvm:work:dom0"
+    - interaction: "qubes-qrexec-tutorial.NextStep+clicked-copy-to-appvm:work:dom0"
       step: "step_21"
   ui:
     - type: "step_information"
@@ -298,23 +298,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       text: "right-click » Copy To AppVM..."
       #image: "right click picture"
       has_ok_btn: "False"
-```
-
----
-
-![](step_images/step_20.png)
-
-Removed since this was merged with the previous step
-
-```[removed]yaml
-- name: "step_20"
-  transitions:
-   - interaction: "qrexec-gui:opened"
-     step: "step_21"
-  ui:
-    - type: "step_information"
-      text: "copy to other AppVM"
-      image: "right click picture"
 ```
 
 ---
@@ -336,13 +319,34 @@ Removed since this was merged with the previous step
 
 ---
 
+![](step_images/step_20.png)
+
+Removed since this was merged with the previous step
+
+```[removed]yaml
+- name: "step_20"
+  transitions:
+   - interaction: "qrexec_gui:opened"
+     step: "step_21"
+  ui:
+    - type: "step_information"
+      text: "copy to other AppVM"
+      image: "right click picture"
+```
+
+---
+
 ![](step_images/step_22.png)
 
 ```yaml
 - name: "step_22"
+  setup:
+    - component: "dom0"
+      function: "qvm-run work 'gdbus call --session --dest org.qubes.tutorial.mock_filemanager --object-path \"/\" --method org.qubes.tutorial.mock_filemanager.do_copy_file'"
   transitions:
-   - interaction: "qubes-qrexec-qubes.Filecopy+:work:personal"
-     step: "step_26"
+     #- interaction: "qrexec_gui:opened"
+    - interaction: "qubes-qrexec-qubes.Filecopy+:work:personal"
+      step: "step_26"
   ui:
     - type: "step_information"
       title: "\"personal\" as target"

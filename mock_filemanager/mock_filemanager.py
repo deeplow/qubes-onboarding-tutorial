@@ -110,12 +110,7 @@ class NautilusMock(Gtk.Window):
     def on_copy_to_appvm(self, *args, **kwargs):
         print("clicked right option")
         self.remove_highlight(self.picture)
-        self.tutorial_next_step("copied-to-appvm")
-        install_path = os.path.dirname(__file__)
-        image_path = os.path.join(install_path, "images", "picture.png")
-        subprocess.Popen(["qvm-copy", image_path])
-
-
+        self.tutorial_next_step("clicked-copy-to-appvm")
 
     def highlight_picture(self):
         self.add_highlight(self.picture)
@@ -141,6 +136,15 @@ class NautilusMockDBUSService(dbus.service.Object):
     def highlight_picture_file(self):
         self.nautilus_mock.highlight_picture()
         self.nautilus_mock.allow_user_interaction()
+
+    @dbus.service.method('org.qubes.tutorial.mock_filemanager')
+    def do_copy_file(self):
+        # this is a dbus call so the this can be shown after the modal
+        # on dom0 prompts
+        install_path = os.path.dirname(__file__)
+        image_path = os.path.join(install_path, "images", "picture.png")
+        subprocess.Popen(["qvm-copy", image_path])
+
 
 def main():
     NautilusMock()
