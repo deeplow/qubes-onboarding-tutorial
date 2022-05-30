@@ -69,7 +69,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_4"
   transitions:
    - interaction: "tutorial:next"
-     step: "step_6"
+     step: "step_5"
   ui:
     - type: "current_task"
       task_number: "1"
@@ -80,7 +80,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](step_images/step_5.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_5"
   transitions:
    - interaction: "qubes-menu:open"
@@ -89,8 +89,9 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Open \"Q\" menu"
       text: "To see the available qubes and their applications"
-    - type: "hotspot"
-      location: "top left of screen"
+      has_ok_btn: "False"
+    #- type: "hotspot"
+    #  location: "top left of screen"
 ```
 
 ---
@@ -144,7 +145,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_10"
   transitions:
    - interaction: "tutorial:next"
-     step: "step_12"
+     step: "step_11"
   ui:
     - type: "current_task"
       task_number: "2"
@@ -155,7 +156,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](step_images/step_11.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_11"
   transitions:
    - interaction: "qubes-menu:open"
@@ -164,8 +165,9 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "step_information"
       title: "Open \"Q\" menu"
       text: "To see the available qubes and their applications"
-    - type: "hotspot"
-      location: "top left of screen"
+      has_ok_btn: "False"
+    #- type: "hotspot"
+    #  location: "top left of screen"
 ```
 
 ---
