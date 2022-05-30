@@ -104,7 +104,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "qubes-menu-highlight"
       vm_name: "work"
       app_name: "Files"
-      override_exec: "qvm-run -q -a --service -- work qubes.StartApp+org.gnome.Terminal"
+      override_exec:
+        - "qvm-run -q work 'rm -r QubesIncoming/dom0/included_tutorials/'"
+        - "qvm-copy-to-vm work /usr/share/qubes/tutorial/included_tutorials/"
+        - "qvm-run -q work 'touch note.txt'"
   transitions:
    - interaction: "qubes-menu:work:Files"
      step: "step_9"
