@@ -3,6 +3,8 @@
 Here we define the steps in the onboarding tutorial presented during the Qubes
 summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
+This file is meant to be used with the [Qubes Tutorial Engine](https://github.com/deeplow/qubes-tutorial).
+
 ----
 
 ![](step_images/step_1.png)
