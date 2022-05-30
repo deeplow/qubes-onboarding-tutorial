@@ -18,7 +18,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "exit"
   ui:
     - type: "modal"
-      template: "step_1.ui"
+      template: "custom_ui/step_1.ui"
       button_label: "Learn the basics\n5 minute tutorial »"
 ```
 
@@ -36,7 +36,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "step_1"
   ui:
     - type: "modal"
-      template: "step_1.ui"
+      template: "custom_ui/step_1.ui"
       main_button_label: "I get it »"
       secondary_button_label: "<- previous"
 ```
@@ -55,7 +55,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "step_2"
   ui:
     - type: "modal"
-      template: "step_3.ui"
+      template: "custom_ui/step_3.ui"
       main_button_label: "I'm ready!"
       secondary_button_label: "<- previous"
 ```
@@ -240,7 +240,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "step_18"
   ui:
     - type: "modal"
-      template: "step_17.ui"
+      template: "custom_ui/step_17.ui"
       button_label: "I understand"
 ```
 
@@ -305,7 +305,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "step_22"
   ui:
     - type: "modal"
-      template: "step_21.ui"
+      template: "custom_ui/step_21.ui"
       button_lable: "OK »"
 ```
 
