@@ -108,6 +108,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   transitions:
    - interaction: "qubes-menu:work:Files"
      step: "step_9"
+  teardown:
+    - type: "qubes-menu-remove-highlight"
 ```
 
 ---
@@ -155,8 +157,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "current_task"
       task_number: "2"
       task_description: "Do the same for the personal qube's files app"
-  teardown:
-    - type: "qubes-menu-remove-highlight"
 ```
 
 ---
