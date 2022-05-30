@@ -104,11 +104,32 @@ ui:
 name: "step_6"
 setup:
   - component: "qubes_menu"
-    function: "do_show_tutorial_path_to_app_override_exec"
+    function: "do_show_tutorial_path_to_app"
+    parameters:
+      vm_name: "work"
+      app_name: "Files"
+
+  - component: "qubes_menu"
+    function: "do_override_exec"
     parameters:
       vm_name: "work"
       app_name: "Files"
       override_exec: "qvm-run -q work '/usr/lib/qubes-onboarding-tutorial-1/exec_cmd_wrapper.py qubes-tutorial-mock-filemanager'"
+
+  # disable other default menu entries to prevent user mistakes
+  - component: "qubes_menu"
+    function: "do_override_exec"
+    parameters:
+      vm_name: "work"
+      app_name: "Firefox"
+      override_exec: "# disabled to prevent user mistakes"
+  - component: "qubes_menu"
+    function: "do_override_exec"
+    parameters:
+      vm_name: "work"
+      app_name: "Terminal"
+      override_exec: "# disabled to prevent user mistakes"
+
 transitions:
   - interaction: "qubes_menu:work:Files"
     step: "step_9"
@@ -191,13 +212,33 @@ ui:
 name: "step_12"
 setup:
   - component: "qubes_menu"
-    function: "do_show_tutorial_path_to_app_override_exec"
+    function: "do_show_tutorial_path_to_app"
+    parameters:
+      vm_name: "personal"
+      app_name: "Files"
+  - component: "qubes_menu"
+    function: "do_override_exec"
     parameters:
       vm_name: "personal"
       app_name: "Files"
       # open file manager and notify of next step otherwise it's hard to know
       # exactly when the file manager actually opens
       override_exec: 'qvm-run personal "/usr/lib/qubes-onboarding-tutorial-1/exec_cmd_wrapper.py nautilus ~/"'
+
+  # disable other default menu entries to prevent user mistakes
+  - component: "qubes_menu"
+    function: "do_override_exec"
+    parameters:
+      vm_name: "personal"
+      app_name: "Firefox"
+      override_exec: "# disabled to prevent user mistakes"
+  - component: "qubes_menu"
+    function: "do_override_exec"
+    parameters:
+      vm_name: "personal"
+      app_name: "Terminal"
+      override_exec: "# disabled to prevent user mistakes"
+
 transitions:
   - interaction: "qubes_menu:personal:Files"
     step: "step_15"
