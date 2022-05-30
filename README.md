@@ -242,6 +242,8 @@ setup:
 transitions:
   - interaction: "qubes_menu:personal:Files"
     step: "step_15"
+  - interaction: "qubes_menu:hide"
+    step: "step_11"
 teardown:
   - component: "qubes_menu"
     function: "do_hide_tutorial_path"
