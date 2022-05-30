@@ -490,42 +490,57 @@ Removed since this was merged with the previous step
 - name: "step_31.1"
   transitions:
    - interaction: "qubes-events:personal:domain-shutdown"
-     step: "end"
+     step: "step_32"
   ui:
     - type: "step_information"
       title: "Shutdown the qubes"
       text: "Shutdown \"personal\""
+      has_ok_btn: "False"
+  teardown:
+    - component: "qubes_domains"
+      function: "do_hide_tutorial_path"
 ```
 
 ---
 
 ![](step_images/step_32.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_32"
+  setup:
+    - component: "qubes_domains"
+      function: "do_show_tutorial_path"
+      parameters:
+        vm_name: "work"
+        action_name: "shutdown"
   transitions:
     - interaction: "qubes_domains:open"
       step: "step_32.1"
   ui:
     - type: "step_information"
       title: "Shutdown the qubes"
-      text: "Shutdown \"personal\""
-    - type: "hotspot"
-      location: "Qubes Domains widget"
+      text: "Shutdown \"work\""
+      has_ok_btn: "False"
+    #- type: "hotspot"
+    #  location: "Qubes Domains widget"
 ```
 
 ---
 
 ![](step_images/step_32.1.png)
-```[disabled]yaml
+```yaml
 - name: "step_32.1"
   transitions:
-   - interaction: "qubes-events:personal:domain-shutdown"
+   - interaction: "qubes-events:work:domain-shutdown"
      step: "end"
   ui:
     - type: "step_information"
       title: "Shutdown the qubes"
-      text: "Shutdown \"personal\""
+      text: "Shutdown \"work\""
+      has_ok_btn: "False"
+  teardown:
+    - component: "qubes_domains"
+      function: "do_hide_tutorial_path"
 ```
 
 ---
