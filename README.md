@@ -92,8 +92,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       x_coord: "0"
       y_coord: "0"
       point_to_corner: "top left"
-    #- type: "hotspot"
-    #  location: "top left of screen"
 ```
 
 ---
@@ -179,8 +177,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       x_coord: "0"
       y_coord: "0"
       point_to_corner: "top left"
-    #- type: "hotspot"
-    #  location: "top left of screen"
 ```
 
 ---
@@ -443,8 +439,6 @@ The user closes one of the windows
       text: "Now let's close it all, since we don't need it anymore"
       has_ok_btn: "False"
       align_vertical: "bottom"
-    #- type: "hotspot"
-    #  location: "over work window close button"
 ```
 
 ---
@@ -466,8 +460,6 @@ The user closes another window
       text: "Now let's close it all, since we don't need it anymore"
       has_ok_btn: "False"
       align_vertical: "bottom"
-    #- type: "hotspot"
-    #  location: "over personal window close button"
 ```
 
 ---
