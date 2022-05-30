@@ -101,12 +101,14 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_6"
   setup:
-    - type: "qubes-menu"
+    - type: "qubes-menu-highlight"
       vm_name: "work"
       app_name: "Files"
   transitions:
-   - interaction: "tutorial:next"
+   - interaction: "qubes-menu:work:Files"
      step: "step_10"
+  teardown:
+    - type: "qubes-menu-remove-highlight"
 ```
 
 ---
@@ -177,12 +179,15 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_12"
   setup:
-    - type: "qubes-menu"
+    - type: "qubes-menu-highlight"
       vm_name: "personal"
       app_name: "Files"
   transitions:
-   - interaction: "tutorial:next"
+   - interaction: "qubes-menu:personal:Files"
      step: "step_16"
+  teardown:
+    - type: "qubes-menu-remove-highlight"
+
 ```
 
 ---
