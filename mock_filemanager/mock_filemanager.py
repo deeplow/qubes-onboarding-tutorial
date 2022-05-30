@@ -47,7 +47,6 @@ class NautilusMock(Gtk.Window):
 
         # setup dom0 <-> mock_filemanager communication
         self.setup_dbus_service()
-        self.tutorial_next_step("ui_ready")
 
         # setup window
         self.set_style()
@@ -110,7 +109,8 @@ class NautilusMock(Gtk.Window):
     def on_copy_to_appvm(self, *args, **kwargs):
         print("clicked right option")
         self.remove_highlight(self.picture)
-        self.tutorial_next_step("clicked-copy-to-appvm")
+        subprocess.Popen(["qrexec-client-vm", "dom0",
+                          f"tutorial.NextStep+clicked-copy-to-appvm"])
 
     def highlight_picture(self):
         self.add_highlight(self.picture)
@@ -121,9 +121,6 @@ class NautilusMock(Gtk.Window):
     def remove_highlight(self, widget):
         widget.get_style_context().remove_class("highlighted")
 
-    def tutorial_next_step(self, identifier):
-        subprocess.Popen(["qrexec-client-vm", "dom0",
-                          f"tutorial.NextStep+{identifier}"])
 
 class NautilusMockDBUSService(dbus.service.Object):
     def __init__(self, nautilus_mock):

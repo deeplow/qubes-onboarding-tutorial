@@ -106,7 +106,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       parameters:
         vm_name: "work"
         app_name: "Files"
-        override_exec: "qvm-run -q work 'qubes-tutorial-mock-filemanager'"
+        override_exec: "qvm-run -q work '/usr/lib/qubes-onboarding-tutorial-1/exec_cmd_wrapper.py qubes-tutorial-mock-filemanager'"
   transitions:
    - interaction: "qubes_menu:work:Files"
      step: "step_9"
@@ -135,7 +135,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_9"
   transitions:
-    - interaction: "qubes-qrexec-tutorial.NextStep+ui_ready:work:dom0"
+    - interaction: "qubes-qrexec-tutorial.NextStep+opened_window:work:dom0"
       step: "step_10"
   ui:
     - type: "step_information"
@@ -419,11 +419,15 @@ Removed since this was merged with the previous step
 
 ![](step_images/step_28.png)
 
+The user closes one of the windows
+
 ```yaml
 - name: "step_28"
   transitions:
+    - interaction: "qubes-qrexec-tutorial.NextStep+closed_all_windows:work:dom0"
+      step: "step_29"
     - interaction: "qubes-qrexec-tutorial.NextStep+closed_all_windows:personal:dom0"
-      step: "step_30"
+      step: "step_29"
   ui:
     - type: "step_information"
       title: "close all the windows"
@@ -437,17 +441,22 @@ Removed since this was merged with the previous step
 
 ![](step_images/step_29.png)
 
-```[disabled]yaml
+The user closes another window
+
+```yaml
 - name: "step_29"
   transitions:
-   - interaction: "qubes-guid:personal:close-all-windows"
-     step: "step_30"
+    - interaction: "qubes-qrexec-tutorial.NextStep+closed_all_windows:work:dom0"
+      step: "step_30"
+    - interaction: "qubes-qrexec-tutorial.NextStep+closed_all_windows:personal:dom0"
+      step: "step_30"
   ui:
     - type: "step_information"
       title: "close all the windows"
       text: "Now let's close it all, since we don't need it anymore"
-    - type: "hotspot"
-      location: "over personal window close button"
+      has_ok_btn: "False"
+    #- type: "hotspot"
+    #  location: "over personal window close button"
 ```
 
 ---
