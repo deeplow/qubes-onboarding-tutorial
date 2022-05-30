@@ -101,16 +101,18 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_6"
   setup:
-    - type: "qubes-menu-highlight"
-      vm_name: "work"
-      app_name: "Files"
-      override_exec:
-        - "qvm-run -q work 'qubes-tutorial-mock-filemanager'"
+    - component: "qubesmenu"
+      function: "do_show_path_to_app_override_exec"
+      parameters:
+        vm_name: "work"
+        app_name: "Files"
+        override_exec: "qvm-run -q work 'qubes-tutorial-mock-filemanager'"
   transitions:
    - interaction: "qubes-menu:work:Files"
      step: "step_9"
   teardown:
-    - type: "qubes-menu-remove-highlight"
+    - component: "qubesmenu"
+      function: "do_remove_highlights"
 ```
 
 ---
@@ -182,15 +184,17 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_12"
   setup:
-    - type: "qubes-menu-highlight"
-      vm_name: "personal"
-      app_name: "Files"
+    - component: "qubesmenu"
+      function: "do_show_path_to_app"
+      parameters:
+        vm_name: "personal"
+        app_name: "Files"
   transitions:
    - interaction: "qubes-menu:personal:Files"
      step: "step_15"
   teardown:
-    - type: "qubes-menu-remove-highlight"
-
+    - component: "qubesmenu"
+      function: "do_remove_highlights"
 ```
 
 ---
@@ -281,9 +285,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_19"
   setup:
-    - type: "qvm-run"
-      vm_name: "work"
-      command: 'gdbus call --session --dest org.qubes.tutorial.mock_filemanager --object-path "/" --method org.qubes.tutorial.mock_filemanager.highlight_picture_file'
+    - component: "dom0"
+      function: "qvm-run work 'gdbus call --session --dest org.qubes.tutorial.mock_filemanager --object-path \"/\" --method org.qubes.tutorial.mock_filemanager.highlight_picture_file'"
   transitions:
     #- interaction: "qrexec-gui:opened"
     #  step: "step_21"
