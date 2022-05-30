@@ -10,7 +10,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "start"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_2"
@@ -30,7 +29,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_2"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_3"
@@ -50,7 +48,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_3"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_4"
@@ -70,7 +67,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_4"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_10"
@@ -86,7 +82,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_5"
-  component: "Q menu"
   transitions:
    - interaction: "qubes-menu:open"
      step: "step_6"
@@ -104,7 +99,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_6"
-  component: Q Menu
   transitions:
    - interaction: "qubes-menu:work:files"
      step: "step_7"
@@ -129,7 +123,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_9"
-  component: extension
   transitions:
    - interaction: "qubes-events:work:domain-start"
      step: "step_10"
@@ -145,7 +138,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_10"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_16"
@@ -161,7 +153,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_11"
-  component: extension
   transitions:
    - interaction: "qubes-menu:open"
      step: "step_12"
@@ -179,7 +170,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_12"
-  component: Q Menu
   transitions:
     - interaction: "qubes-menu:personal:files"
       step: "step_15"
@@ -204,7 +194,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_15"
-  component: extension
   transitions:
     - interaction: "qubes-events:personal:domain-start"
       step: "step_16"
@@ -221,7 +210,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_16"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_17"
@@ -239,7 +227,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_17"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_18"
@@ -257,7 +244,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_18"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_21"
@@ -273,8 +259,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_19"
-  component: vm
-  vm: work
   transitions:
     # user right-clicks
     - interaction: "vm-interaction:work"
@@ -291,7 +275,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_20"
-  component: "qrexec-gui"
   transitions:
    - interaction: "qrexec-gui:opened"
      step: "step_21"
@@ -307,7 +290,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_21"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_26"
@@ -325,7 +307,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_22"
-  component: Qrexec Admin Prompt
   transitions:
    - interaction: "qrexec-gui:personal:select"
      step: "step_24"
@@ -347,8 +328,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_24"
-  component: Qrexec Admin Prompt
-  vm: personal
   transitions:
     # wait for file to be copied
     - interaction: "tutorial:small-time-wait"
@@ -369,7 +348,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_26"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_27"
@@ -386,7 +364,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_27"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "step_30"
@@ -403,7 +380,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_28"
-  component: dom0 windows
   transitions:
    - interaction: "qubes-guid:work:close-all-windows"
      step: "step_29"
@@ -421,7 +397,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_29"
-  component: dom0
   transitions:
    - interaction: "qubes-guid:personal:close-all-windows"
      step: "step_30"
@@ -439,7 +414,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```yaml
 - name: "step_30"
-  component: tutorial
   transitions:
    - interaction: "tutorial:next"
      step: "end"
@@ -456,7 +430,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_31"
-  component: dom0
   transitions:
    - interaction: "qubes-domains:open"
      step: "step_31.1"
@@ -474,7 +447,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_31.1"
-  component: dom0
   transitions:
    - interaction: "qubes-events:personal:domain-shutdown"
      step: "step_31.2"
@@ -490,7 +462,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ```[disabled]yaml
 - name: "step_32"
-  component: dom0
   transitions:
     - interaction: "qubes-domains:open"
       step: "step_32.1"
@@ -507,7 +478,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ![](step_images/step_32.1.png)
 ```[disabled]yaml
 - name: "step_32.1"
-  component: Qubes Domains
   transitions:
    - interaction: "qubes-events:personal:domain-shutdown"
      step: "end"
