@@ -15,14 +15,13 @@ setuptools.setup(
     license='GPL2+',
     url='https://github.com/deeplow',
     keywords='integrated qubes tutorial',
-    packages=("mock_filemanager", "filemanager_launch_notify"),
+    packages=("mock_filemanager",),
     package_data = {
-            'mock_filemanager': ['*.ui', 'images/*'],
+            'mock_filemanager': ['*.ui', 'images/*']
     },
     entry_points={
         'console_scripts': [
-            'qubes-tutorial-mock-filemanager = mock_filemanager.mock_filemanager:main',
-            'qubes-tutorial-filemanager-launch-notify = filemanager_launch_notify.filemanager_launch_notify:main'
+            'qubes-tutorial-mock-filemanager = mock_filemanager.mock_filemanager:main'
         ]
     }
 )

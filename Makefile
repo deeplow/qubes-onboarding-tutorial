@@ -1,7 +1,7 @@
 TUTORIALS_DIR:=/usr/share/qubes/tutorial/included_tutorials
 
 install-vm:
-	@echo "nothing to do"
+	$(MAKE) -C vm
 
 install-dom0:
 	install -d $(DESTDIR)$(TUTORIALS_DIR)/onboarding-tutorial-1/

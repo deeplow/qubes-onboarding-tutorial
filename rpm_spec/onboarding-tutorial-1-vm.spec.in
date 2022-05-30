@@ -55,11 +55,7 @@ make install-vm DESTDIR=$RPM_BUILD_ROOT
 %{python3_sitelib}/mock_filemanager/__pycache__/*
 %{_bindir}/qubes-tutorial-mock-filemanager
 
-%dir %{python3_sitelib}/filemanager_launch_notify
-%{python3_sitelib}/filemanager_launch_notify/*.py
-%dir %{python3_sitelib}/filemanager_launch_notify/__pycache__
-%{python3_sitelib}/filemanager_launch_notify/__pycache__/*
-%{_bindir}/qubes-tutorial-filemanager-launch-notify
+/usr/lib/qubes-onboarding-tutorial-1/exec_cmd_wrapper.py*
 
 
 %changelog

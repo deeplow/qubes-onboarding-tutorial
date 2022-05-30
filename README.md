@@ -191,7 +191,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
         app_name: "Files"
         # open file manager and notify of next step otherwise it's hard to know
         # exactly when the file manager actually opens
-        override_exec: 'qvm-run personal "qubes-tutorial-filemanager-launch-notify"'
+        override_exec: 'qvm-run personal "/usr/lib/qubes-onboarding-tutorial-1/exec_cmd_wrapper.py nautilus ~/"'
   transitions:
    - interaction: "qubes_menu:personal:Files"
      step: "step_15"
@@ -219,7 +219,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_15"
   transitions:
-    - interaction: "qubes-qrexec-tutorial.NextStep+opened_nautilus:personal:dom0"
+    - interaction: "qubes-qrexec-tutorial.NextStep+opened_window:personal:dom0"
       step: "step_16"
   ui:
     - type: "step_information"
@@ -407,7 +407,7 @@ Removed since this was merged with the previous step
 - name: "step_27"
   transitions:
    - interaction: "tutorial:next"
-     step: "step_30"
+     step: "step_28"
   ui:
     - type: "current_task"
       task_number: "4"
@@ -419,17 +419,18 @@ Removed since this was merged with the previous step
 
 ![](step_images/step_28.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_28"
   transitions:
-   - interaction: "qubes-guid:work:close-all-windows"
-     step: "step_29"
+    - interaction: "qubes-qrexec-tutorial.NextStep+closed_all_windows:personal:dom0"
+      step: "step_30"
   ui:
     - type: "step_information"
       title: "close all the windows"
       text: "Now let's close it all, since we don't need it anymore"
-    - type: "hotspot"
-      location: "over work window close button"
+      has_ok_btn: "False"
+    #- type: "hotspot"
+    #  location: "over work window close button"
 ```
 
 ---
