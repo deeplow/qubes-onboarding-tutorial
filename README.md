@@ -314,6 +314,23 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
+![](step_images/step_20.png)
+
+Removed since this was merged with the previous step
+
+```[removed]yaml
+- name: "step_20"
+  transitions:
+   - interaction: "qrexec_gui:opened"
+     step: "step_21"
+  ui:
+    - type: "step_information"
+      text: "copy to other AppVM"
+      image: "right click picture"
+```
+
+---
+
 ![](step_images/step_21.png)
 
 ```yaml
@@ -328,23 +345,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       next_button: "OK »"
       back_button: ""
       backdrop_enabled: "True"
-```
-
----
-
-![](step_images/step_20.png)
-
-Removed since this was merged with the previous step
-
-```[removed]yaml
-- name: "step_20"
-  transitions:
-   - interaction: "qrexec_gui:opened"
-     step: "step_21"
-  ui:
-    - type: "step_information"
-      text: "copy to other AppVM"
-      image: "right click picture"
 ```
 
 ---
@@ -385,6 +385,11 @@ Copy the file and wait for the qrexec agent to open
       has_ok_btn: "False"
       align_vertical: "bottom"
 ```
+---
+
+
+![](step_images/step_23.1.png)
+
 ---
 
 ![](step_images/step_24.png)
