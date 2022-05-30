@@ -35,7 +35,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
    - interaction_type: "click main button"
      step: "step_3"
    - interaction_type: "click secondary button"
-     step: "step_2"
+     step: "start"
   ui:
     - type: "modal"
       title: "Compartments you start with"
