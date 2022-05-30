@@ -83,7 +83,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_5"
   transitions:
-   - interaction: "qubes-menu:open"
+   - interaction: "qubes_menu:open"
      step: "step_6"
   ui:
     - type: "step_information"
@@ -101,18 +101,18 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_6"
   setup:
-    - component: "qubesmenu"
-      function: "do_show_path_to_app_override_exec"
+    - component: "qubes_menu"
+      function: "do_show_tutorial_path_to_app_override_exec"
       parameters:
         vm_name: "work"
         app_name: "Files"
         override_exec: "qvm-run -q work 'qubes-tutorial-mock-filemanager'"
   transitions:
-   - interaction: "qubes-menu:work:Files"
+   - interaction: "qubes_menu:work:Files"
      step: "step_9"
   teardown:
-    - component: "qubesmenu"
-      function: "do_remove_highlights"
+    - component: "qubes_menu"
+      function: "do_hide_tutorial_path"
 ```
 
 ---
@@ -166,7 +166,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_11"
   transitions:
-   - interaction: "qubes-menu:open"
+   - interaction: "qubes_menu:open"
      step: "step_12"
   ui:
     - type: "step_information"
@@ -184,17 +184,17 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_12"
   setup:
-    - component: "qubesmenu"
-      function: "do_show_path_to_app"
+    - component: "qubes_menu"
+      function: "do_show_tutorial_path_to_app"
       parameters:
         vm_name: "personal"
         app_name: "Files"
   transitions:
-   - interaction: "qubes-menu:personal:Files"
+   - interaction: "qubes_menu:personal:Files"
      step: "step_15"
   teardown:
-    - component: "qubesmenu"
-      function: "do_remove_highlights"
+    - component: "qubes_menu"
+      function: "do_hide_tutorial_path"
 ```
 
 ---
