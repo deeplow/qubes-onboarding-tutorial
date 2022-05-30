@@ -243,6 +243,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "modal"
       template: "custom_ui/step_17.ui"
       next_button: "I understand"
+      back_button: ""
 ```
 
 ---
@@ -308,6 +309,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "modal"
       template: "custom_ui/step_21.ui"
       next_button: "OK »"
+      back_button: ""
 ```
 
 ---
