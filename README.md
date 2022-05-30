@@ -70,6 +70,8 @@ name: "step_4"
 transitions:
   - interaction: "tutorial:next"
     step: "step_5"
+  - interaction: "qubes_menu:open"
+    step: "step_6"
 ui:
   - type: "current_task"
     task_number: "1"
@@ -155,6 +157,8 @@ name: "step_10"
 transitions:
   - interaction: "tutorial:next"
     step: "step_11"
+  - interaction: "qubes_menu:open"
+    step: "step_12"
 ui:
   - type: "current_task"
     task_number: "2"
