@@ -524,9 +524,6 @@ The user closes another window
     - interaction: "qubes_domains:close"
       step: "step_31"
   ui:
-  teardown:
-    - component: "qubes_domains"
-      function: "do_hide_tutorial_path"
 ```
 
 ---
@@ -536,6 +533,10 @@ The user closes another window
 ```yaml
 - name: "step_32"
   setup:
+    # clear previous path
+    - component: "qubes_domains"
+      function: "do_hide_tutorial_path"
+
     - component: "qubes_domains"
       function: "do_show_tutorial_path"
       parameters:
@@ -565,9 +566,6 @@ The user closes another window
       step: "step_33"
     - interaction: "qubes_domains:close"
       step: "step_32"
-  teardown:
-    - component: "qubes_domains"
-      function: "do_hide_tutorial_path"
 ```
 
 ---
@@ -576,6 +574,10 @@ The user closes another window
 
 ```yaml
 - name: "step_33"
+  setup:
+      # clear previous path
+    - component: "qubes_domains"
+      function: "do_hide_tutorial_path"
   transitions:
    - interaction: "tutorial:next"
      step: "end"
