@@ -499,8 +499,10 @@ The user closes another window
         vm_name: "personal"
         action_name: "shutdown"
   transitions:
-   - interaction: "qubes_domains:open"
-     step: "step_31.1"
+    - interaction: "qubes_domains:open"
+      step: "step_31.1"
+    - interaction: "qubes-events:personal:domain-shutdown"
+      step: "step_32"
   ui:
     - type: "step_information_pointing"
       title: "Shutdown the qubes"
@@ -508,8 +510,6 @@ The user closes another window
       x_coord: "-80"
       y_coord: "0"
       point_to_corner: "top right"
-    #- type: "hotspot"
-    #  location: "Qubes Domains widget"
 ```
 
 ---
@@ -519,15 +519,11 @@ The user closes another window
 ```yaml
 - name: "step_31.1"
   transitions:
-   - interaction: "qubes-events:personal:domain-shutdown"
-     step: "step_32"
+    - interaction: "qubes-events:personal:domain-shutdown"
+      step: "step_32"
+    - interaction: "qubes_domains:close"
+      step: "step_31"
   ui:
-    - type: "step_information_pointing"
-      title: "Shutdown the qubes"
-      text: "Shutdown \"personal\""
-      x_coord: "-80"
-      y_coord: "0"
-      point_to_corner: "top right"
   teardown:
     - component: "qubes_domains"
       function: "do_hide_tutorial_path"
@@ -548,6 +544,8 @@ The user closes another window
   transitions:
     - interaction: "qubes_domains:open"
       step: "step_32.1"
+    - interaction: "qubes-events:work:domain-shutdown"
+      step: "step_33"
   ui:
     - type: "step_information_pointing"
       title: "Shutdown the qubes"
@@ -555,8 +553,6 @@ The user closes another window
       x_coord: "-80"
       y_coord: "0"
       point_to_corner: "top right"
-    #- type: "hotspot"
-    #  location: "Qubes Domains widget"
 ```
 
 ---
@@ -565,15 +561,10 @@ The user closes another window
 ```yaml
 - name: "step_32.1"
   transitions:
-   - interaction: "qubes-events:work:domain-shutdown"
-     step: "step_33"
-  ui:
-    - type: "step_information_pointing"
-      title: "Shutdown the qubes"
-      text: "Shutdown \"work\""
-      x_coord: "-80"
-      y_coord: "0"
-      point_to_corner: "top right"
+    - interaction: "qubes-events:work:domain-shutdown"
+      step: "step_33"
+    - interaction: "qubes_domains:close"
+      step: "step_32"
   teardown:
     - component: "qubes_domains"
       function: "do_hide_tutorial_path"
