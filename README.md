@@ -107,8 +107,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   transitions:
    - interaction: "qubes-menu:work:Files"
      step: "step_10"
-  teardown:
-    - type: "qubes-menu-remove-highlight"
 ```
 
 ---
@@ -152,6 +150,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "current_task"
       task_number: "2"
       task_description: "Do the same for the personal qube's files app"
+  teardown:
+    - type: "qubes-menu-remove-highlight"
 ```
 
 ---
@@ -306,7 +306,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_21"
   transitions:
    - interaction: "tutorial:next"
-     step: "step_26"
+     step: "step_22"
   ui:
     - type: "modal"
       title: "Administrator prompt"
@@ -319,15 +319,16 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](step_images/step_22.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_22"
   transitions:
-   - interaction: "qrexec-gui:personal:select"
-     step: "step_24"
+   - interaction: "qubes-qrexec-qubes.Filecopy+:work:personal"
+     step: "step_26"
   ui:
     - type: "step_information"
       title: "\"personal\" as target"
       text: "Select the qube to which you wish to copy"
+      has_ok_btn: "True"
 ```
 
 ---
