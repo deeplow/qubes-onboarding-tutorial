@@ -271,6 +271,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       template: "custom_ui/step_17.ui"
       next_button: "I understand"
       back_button: ""
+      backdrop_enabled: "True"
 ```
 
 ---
@@ -326,6 +327,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       template: "custom_ui/step_21.ui"
       next_button: "OK »"
       back_button: ""
+      backdrop_enabled: "True"
 ```
 
 ---
