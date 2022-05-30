@@ -359,11 +359,6 @@ Copy the file and wait for the qrexec agent to open
   transitions:
     - interaction: "qrexec_policy_gui:open"
       step: "step_23"
-  ui:
-    - type: "step_information"
-      title: "\"personal\" as target"
-      text: "Select the qube to which you wish to copy"
-      has_ok_btn: "True"
 ```
 
 ---
