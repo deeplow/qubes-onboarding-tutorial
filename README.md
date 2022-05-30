@@ -5,7 +5,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ----
 
-
 ![](step_images/step_1.png)
 
 ```yaml
@@ -73,8 +72,7 @@ transitions:
   - interaction: "qubes_menu:open"
     step: "step_6"
 ui:
-  - type: "current_task"
-    task_number: "1"
+  - type: "new_task"
     task_description: "Let's open the file explorer on the work qube"
 ```
 
@@ -181,8 +179,7 @@ transitions:
   - interaction: "qubes_menu:open"
     step: "step_12"
 ui:
-  - type: "current_task"
-    task_number: "2"
+  - type: "new_task"
     task_description: "Do the same for the personal qube's files app"
 ```
 
@@ -327,8 +324,7 @@ transitions:
   - interaction: "tutorial:next"
     step: "step_19"
 ui:
-  - type: "current_task"
-    task_number: "3"
+  - type: "new_task"
     task_description: "Copy picture to the personal qube"
 ```
 
@@ -461,8 +457,7 @@ transitions:
   - interaction: "tutorial:next"
     step: "step_28"
 ui:
-  - type: "current_task"
-    task_number: "4"
+  - type: "new_task"
     task_description: "Shutdown these qubes. They aren't needed now"
 
 ```
@@ -628,8 +623,7 @@ ui:
     template: "custom_ui/step_33.ui"
     next_button: "Finish »"
     back_button: ""
-  - type: "current_task"
-    task_number: "-1"
+  - type: "no_more_tasks"
     task_description: "[disables the task information]"
 ```
 
