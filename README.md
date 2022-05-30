@@ -104,7 +104,6 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       vm_name: "work"
       app_name: "Files"
   transitions:
-   #- interaction: "qubes-menu:work:files"
    - interaction: "tutorial:next"
      step: "step_10"
 ```
@@ -145,7 +144,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_10"
   transitions:
    - interaction: "tutorial:next"
-     step: "step_16"
+     step: "step_12"
   ui:
     - type: "current_task"
       task_number: "2"
@@ -173,12 +172,15 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](step_images/step_12.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_12"
+  setup:
+    - type: "qubes-menu"
+      vm_name: "personal"
+      app_name: "Files"
   transitions:
-    - interaction: "qubes-menu:personal:files"
-      step: "step_15"
-  ui: False
+   - interaction: "tutorial:next"
+     step: "step_16"
 ```
 
 ---
