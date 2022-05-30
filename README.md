@@ -69,7 +69,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   component: tutorial
   transitions:
    - interaction_type: "click main button"
-     step: "step_6"
+     step: "step_16"
   ui:
     - type: "step_information"
       title: "Task 1"
@@ -80,7 +80,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_5.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_5"
   component: "Q menu"
   transitions:
@@ -98,7 +98,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_6.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_6"
   component: Q Menu
   transitions:
@@ -123,7 +123,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ![](./step_images/step_9.png)
 
 
-```yaml
+```[disabled]yaml
 - name: "step_9"
   component: extension
   transitions:
@@ -139,7 +139,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_10.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_10"
   component: tutorial
   transitions:
@@ -155,7 +155,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_11.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_11"
   component: extension
   transitions:
@@ -173,7 +173,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_12.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_12"
   component: Q Menu
   transitions:
@@ -198,7 +198,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_15.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_15"
   component: extension
   transitions:
@@ -253,7 +253,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   component: tutorial
   transitions:
    - interaction_type: "click OK"
-     step: "step_19"
+     step: "step_21"
   ui:
     - type: "step_information"
       title: "Task 3"
@@ -264,7 +264,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_19.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_19"
   component: vm
   vm: work
@@ -281,7 +281,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_20.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_20"
   component: "qrexec-gui"
   transitions:
@@ -302,7 +302,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   component: tutorial
   transitions:
    - interaction_type: "click button"
-     step: "step_22"
+     step: "step_26"
   ui:
     - type: "modal"
       template: "custom_ui/step_21.ui"
@@ -313,7 +313,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_22.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_22"
   component: Qrexec Admin Prompt
   transitions:
@@ -335,7 +335,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_24.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_24"
   component: Qrexec Admin Prompt
   vm: personal
@@ -376,7 +376,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   component: tutorial
   transitions:
    - interaction_type: "click OK"
-     step: "step_28"
+     step: "step_30"
   ui:
     - type: "step_information"
       title: "Task 4 (last one)"
@@ -387,7 +387,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_28.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_28"
   component: dom0 windows
   transitions:
@@ -405,7 +405,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_29.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_29"
   component: dom0
   transitions:
@@ -428,7 +428,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   component: tutorial
   transitions:
    - interaction_type: "click OK"
-     step: "step_31"
+     step: "end"
   ui:
     - type: "step_information"
       title: "Closing windows is not enough"
@@ -439,7 +439,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_31.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_31"
   component: dom0
   transitions:
@@ -457,7 +457,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_31.1.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_31.1"
   component: dom0
   transitions:
@@ -473,7 +473,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](./step_images/step_32.png)
 
-```yaml
+```[disabled]yaml
 - name: "step_32"
   component: dom0
   transitions:
@@ -490,7 +490,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ---
 
 ![](./step_images/step_32.1.png)
-```yaml
+```[disabled]yaml
 - name: "step_32.1"
   component: Qubes Domains
   transitions:
