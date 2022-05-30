@@ -580,7 +580,7 @@ The user closes another window
 - name: "step_32.1"
   transitions:
    - interaction: "qubes-events:work:domain-shutdown"
-     step: "end"
+     step: "step_33"
   ui:
     - type: "step_information_pointing"
       title: "Shutdown the qubes"
@@ -596,6 +596,22 @@ The user closes another window
 ---
 
 ![](step_images/step_33.png)
+
+```yaml
+- name: "step_33"
+  transitions:
+   - interaction: "tutorial:next"
+     step: "end"
+  ui:
+    - type: "modal"
+      title: "Mission complete!"
+      template: "custom_ui/step_33.ui"
+      next_button: "Finish »"
+      back_button: ""
+    - type: "current_task"
+      task_number: "-1"
+      task_description: "[disables the task information]"
+```
 
 ---
 
