@@ -12,9 +12,9 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "start"
   component: tutorial
   transitions:
-   - interaction_type: "click main button"
+   - interaction: "tutorial:next"
      step: "step_2"
-   - interaction_type: "click secondary button"
+   - interaction: "tutorial:back"
      step: "end"
   ui:
     - type: "modal"
@@ -32,9 +32,9 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_2"
   component: tutorial
   transitions:
-   - interaction_type: "click main button"
+   - interaction: "tutorial:next"
      step: "step_3"
-   - interaction_type: "click secondary button"
+   - interaction: "tutorial:back"
      step: "start"
   ui:
     - type: "modal"
@@ -52,9 +52,9 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_3"
   component: tutorial
   transitions:
-   - interaction_type: "click main button"
+   - interaction: "tutorial:next"
      step: "step_4"
-   - interaction_type: "click secondary button"
+   - interaction: "tutorial:back"
      step: "step_2"
   ui:
     - type: "modal"
@@ -72,7 +72,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_4"
   component: tutorial
   transitions:
-   - interaction_type: "click OK"
+   - interaction: "tutorial:next"
      step: "step_10"
   ui:
     - type: "current_task"
@@ -88,7 +88,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_5"
   component: "Q menu"
   transitions:
-   - interaction_type: "open Q menu"
+   - interaction: "qubes-menu:open"
      step: "step_6"
   ui:
     - type: "step_information"
@@ -106,7 +106,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_6"
   component: Q Menu
   transitions:
-   - interaction_type: "work: open files application"
+   - interaction: "qubes-menu:work:files"
      step: "step_7"
 ```
 
@@ -131,7 +131,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_9"
   component: extension
   transitions:
-   - interaction_type: "work: domain UI started"
+   - interaction: "qubes-events:work:domain-start"
      step: "step_10"
   ui:
     - type: "step_information"
@@ -147,7 +147,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_10"
   component: tutorial
   transitions:
-   - interaction_type: "click OK"
+   - interaction: "tutorial:next"
      step: "step_16"
   ui:
     - type: "current_task"
@@ -163,7 +163,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_11"
   component: extension
   transitions:
-   - interaction_type: "open Q menu"
+   - interaction: "qubes-menu:open"
      step: "step_12"
   ui:
     - type: "step_information"
@@ -181,8 +181,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_12"
   component: Q Menu
   transitions:
-   - interaction_type: "personal: open files application"
-     step: "step_15"
+    - interaction: "qubes-menu:personal:files"
+      step: "step_15"
   ui: False
 ```
 
@@ -206,8 +206,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_15"
   component: extension
   transitions:
-   - interaction_type: "personal domain started"
-     step: "step_16"
+    - interaction: "qubes-events:personal:domain-start"
+      step: "step_16"
   ui:
     - type: "step_information"
       title: "Wait for the qube to start"
@@ -223,7 +223,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_16"
   component: tutorial
   transitions:
-   - interaction_type: "click OK"
+   - interaction: "tutorial:next"
      step: "step_17"
   ui:
     - type: "step_information"
@@ -241,7 +241,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_17"
   component: tutorial
   transitions:
-   - interaction_type: "click main button"
+   - interaction: "tutorial:next"
      step: "step_18"
   ui:
     - type: "modal"
@@ -259,7 +259,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_18"
   component: tutorial
   transitions:
-   - interaction_type: "click OK"
+   - interaction: "tutorial:next"
      step: "step_21"
   ui:
     - type: "current_task"
@@ -276,8 +276,9 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   component: vm
   vm: work
   transitions:
-   - interaction_type: "right click coordinates"
-     step: "step_20"
+    # user right-clicks
+    - interaction: "vm-interaction:work"
+      step: "step_20"
   ui:
     - type: "step_information"
       text: "right click picture"
@@ -292,7 +293,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_20"
   component: "qrexec-gui"
   transitions:
-   - interaction_type: "qrexec-gui opened"
+   - interaction: "qrexec-gui:opened"
      step: "step_21"
   ui:
     - type: "step_information"
@@ -308,7 +309,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_21"
   component: tutorial
   transitions:
-   - interaction_type: "click main button"
+   - interaction: "tutorial:next"
      step: "step_26"
   ui:
     - type: "modal"
@@ -326,7 +327,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_22"
   component: Qrexec Admin Prompt
   transitions:
-   - interaction_type: "Qrexec: approved to personal"
+   - interaction: "qrexec-gui:personal:select"
      step: "step_24"
   ui:
     - type: "step_information"
@@ -349,8 +350,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   component: Qrexec Admin Prompt
   vm: personal
   transitions:
-   - interaction_type: "QubesIncoming exists in personal"
-     step: "step_26"
+    # wait for file to be copied
+    - interaction: "tutorial:small-time-wait"
+   #- interaction: "QubesIncoming exists in personal"
+      step: "step_26"
   ui: False
 ```
 ---
@@ -368,7 +371,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_26"
   component: tutorial
   transitions:
-   - interaction_type: "click OK"
+   - interaction: "tutorial:next"
      step: "step_27"
   ui:
     - type: "step_information"
@@ -385,7 +388,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_27"
   component: tutorial
   transitions:
-   - interaction_type: "click OK"
+   - interaction: "tutorial:next"
      step: "step_30"
   ui:
     - type: "current_task"
@@ -402,7 +405,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_28"
   component: dom0 windows
   transitions:
-   - interaction_type: "work: close all windows"
+   - interaction: "qubes-guid:work:close-all-windows"
      step: "step_29"
   ui:
     - type: "step_information"
@@ -420,7 +423,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_29"
   component: dom0
   transitions:
-   - interaction_type: "work: close all windows"
+   - interaction: "qubes-guid:personal:close-all-windows"
      step: "step_30"
   ui:
     - type: "step_information"
@@ -438,7 +441,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_30"
   component: tutorial
   transitions:
-   - interaction_type: "click OK"
+   - interaction: "tutorial:next"
      step: "end"
   ui:
     - type: "step_information"
@@ -455,7 +458,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_31"
   component: dom0
   transitions:
-   - interaction_type: "open Qubes Domains"
+   - interaction: "qubes-domains:open"
      step: "step_31.1"
   ui:
     - type: "step_information"
@@ -473,7 +476,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_31.1"
   component: dom0
   transitions:
-   - interaction_type: "personal shut down"
+   - interaction: "qubes-events:personal:domain-shutdown"
      step: "step_31.2"
   ui:
     - type: "step_information"
@@ -489,7 +492,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_32"
   component: dom0
   transitions:
-    - interaction_type: "open Qubes Domains"
+    - interaction: "qubes-domains:open"
       step: "step_32.1"
   ui:
     - type: "step_information"
@@ -506,7 +509,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_32.1"
   component: Qubes Domains
   transitions:
-   - interaction_type: "work qube shutdown"
+   - interaction: "qubes-events:personal:domain-shutdown"
      step: "end"
   ui:
     - type: "step_information"
