@@ -341,15 +341,16 @@ Removed since this was merged with the previous step
 
 ![](step_images/step_22.png)
 
+Copy the file and wait for the qrexec agent to open
+
 ```yaml
 - name: "step_22"
   setup:
     - component: "dom0"
       function: "qvm-run work 'gdbus call --session --dest org.qubes.tutorial.mock_filemanager --object-path \"/\" --method org.qubes.tutorial.mock_filemanager.do_copy_file'"
   transitions:
-     #- interaction: "qrexec_gui:opened"
-    - interaction: "qubes-qrexec-qubes.Filecopy+:work:personal"
-      step: "step_26"
+    - interaction: "qrexec_policy_gui:open"
+      step: "step_23"
   ui:
     - type: "step_information"
       title: "\"personal\" as target"
@@ -361,8 +362,23 @@ Removed since this was merged with the previous step
 
 ![](step_images/step_23.png)
 
-(pseudo-step)
 
+```yaml
+- name: "step_23"
+  setup:
+    - component: "qrexec_policy_gui"
+      function: "do_show_tutorial_path_to_vm"
+      parameters:
+        vm_name: "personal"
+  transitions:
+    - interaction: "qubes-qrexec-qubes.Filecopy+:work:personal"
+      step: "step_26"
+  ui:
+    - type: "step_information"
+      title: "\"personal\" as target"
+      text: "Select the qube to which you wish to copy"
+      has_ok_btn: "True"
+```
 ---
 
 ![](step_images/step_24.png)
