@@ -25,7 +25,7 @@ BuildRequires:  make
 
 Requires:  qubes-tutorial >= 1.0.13
 Requires:  qubes_menu >= 0.2.1
-Requires:  qui >= 4.1.13
+Requires:  qui >= 4.1.14
 
 Provides:   qubes-tutorial-onboarding-1 = %{version}-%{release}
 
