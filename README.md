@@ -18,6 +18,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "end"
   ui:
     - type: "modal"
+      title: ""
       template: "custom_ui/step_1.ui"
       next_button: "Learn the basics\n5 minute tutorial »"
       back_button: "Skip tutorial,\ndo later"
@@ -37,6 +38,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "start"
   ui:
     - type: "modal"
+      title: "Compartments you start with"
       template: "custom_ui/step_1.ui"
       next_button: "I get it »"
       back_button: "<- previous"
@@ -56,6 +58,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "step_2"
   ui:
     - type: "modal"
+      title: "Your mission"
       template: "custom_ui/step_3.ui"
       next_button: "I'm ready!"
       back_button: "<- previous"
@@ -241,6 +244,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "step_18"
   ui:
     - type: "modal"
+      title: "colored borders"
       template: "custom_ui/step_17.ui"
       next_button: "I understand"
       back_button: ""
@@ -307,6 +311,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
      step: "step_26"
   ui:
     - type: "modal"
+      title: "Administrator prompt"
       template: "custom_ui/step_21.ui"
       next_button: "OK »"
       back_button: ""
