@@ -73,12 +73,11 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
   component: tutorial
   transitions:
    - interaction_type: "click OK"
-     step: "step_16"
+     step: "step_10"
   ui:
-    - type: "step_information"
-      title: "Task 1"
-      text: "Let's open the file explorer on the work qube"
-      has_ok_btn: "True"
+    - type: "current_task"
+      task_number: "1"
+      task_description: "Let's open the file explorer on the work qube"
 ```
 
 ---
@@ -144,16 +143,16 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](step_images/step_10.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_10"
   component: tutorial
   transitions:
    - interaction_type: "click OK"
-     step: "step_11"
+     step: "step_16"
   ui:
-    - type: "step_information"
-      title: "Task 2"
-      text: "Do the same for the personal qube's files app"
+    - type: "current_task"
+      task_number: "2"
+      task_description: "Do the same for the personal qube's files app"
 ```
 
 ---
@@ -263,10 +262,9 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
    - interaction_type: "click OK"
      step: "step_21"
   ui:
-    - type: "step_information"
-      title: "Task 3"
-      text: "Copy picture to the personal qube"
-      has_ok_btn: "True"
+    - type: "current_task"
+      task_number: "3"
+      task_description: "Copy picture to the personal qube"
 ```
 
 ---
@@ -390,10 +388,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
    - interaction_type: "click OK"
      step: "step_30"
   ui:
-    - type: "step_information"
-      title: "Task 4 (last one)"
-      text: "Shutdown these qubes. They aren't needed now"
-      has_ok_btn: "True"
+    - type: "current_task"
+      task_number: "4"
+      task_description: "Shutdown these qubes. They aren't needed now"
+
 ```
 
 ---
