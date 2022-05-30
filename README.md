@@ -6,7 +6,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ----
 
 
-![](./step_images/step_1.png)
+![](step_images/step_1.png)
 
 ```yaml
 - name: "start"
@@ -26,7 +26,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_2.png)
+![](step_images/step_2.png)
 
 ```yaml
 - name: "step_2"
@@ -46,7 +46,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_3.png)
+![](step_images/step_3.png)
 
 ```yaml
 - name: "step_3"
@@ -66,7 +66,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_4.png)
+![](step_images/step_4.png)
 
 ```yaml
 - name: "step_4"
@@ -82,7 +82,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_5.png)
+![](step_images/step_5.png)
 
 ```[disabled]yaml
 - name: "step_5"
@@ -100,7 +100,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_6.png)
+![](step_images/step_6.png)
 
 ```[disabled]yaml
 - name: "step_6"
@@ -112,19 +112,19 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_7.png)
+![](step_images/step_7.png)
 
 (pseudo transiton)
 
 ---
 
-![](./step_images/step_8.png)
+![](step_images/step_8.png)
 
 (pseudo transiton)
 
 ---
 
-![](./step_images/step_9.png)
+![](step_images/step_9.png)
 
 
 ```[disabled]yaml
@@ -141,7 +141,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_10.png)
+![](step_images/step_10.png)
 
 ```[disabled]yaml
 - name: "step_10"
@@ -157,7 +157,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_11.png)
+![](step_images/step_11.png)
 
 ```[disabled]yaml
 - name: "step_11"
@@ -175,7 +175,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_12.png)
+![](step_images/step_12.png)
 
 ```[disabled]yaml
 - name: "step_12"
@@ -188,19 +188,19 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_13.png)
+![](step_images/step_13.png)
 
 (pseudo-interaction)
 
 ---
 
-![](./step_images/step_14.png)
+![](step_images/step_14.png)
 
 (pseudo-interaction)
 
 ---
 
-![](./step_images/step_15.png)
+![](step_images/step_15.png)
 
 ```[disabled]yaml
 - name: "step_15"
@@ -216,7 +216,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_16.png)
+![](step_images/step_16.png)
 
 
 ```yaml
@@ -233,7 +233,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_17.png)
+![](step_images/step_17.png)
 
 
 ```yaml
@@ -252,7 +252,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_18.png)
+![](step_images/step_18.png)
 
 ```yaml
 - name: "step_18"
@@ -268,7 +268,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_19.png)
+![](step_images/step_19.png)
 
 ```[disabled]yaml
 - name: "step_19"
@@ -285,7 +285,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_20.png)
+![](step_images/step_20.png)
 
 ```[disabled]yaml
 - name: "step_20"
@@ -301,7 +301,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_21.png)
+![](step_images/step_21.png)
 
 ```yaml
 - name: "step_21"
@@ -319,7 +319,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_22.png)
+![](step_images/step_22.png)
 
 ```[disabled]yaml
 - name: "step_22"
@@ -335,13 +335,13 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_23.png)
+![](step_images/step_23.png)
 
 (pseudo-step)
 
 ---
 
-![](./step_images/step_24.png)
+![](step_images/step_24.png)
 
 ```[disabled]yaml
 - name: "step_24"
@@ -354,14 +354,14 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```
 ---
 
-![](./step_images/step_25.png)
+![](step_images/step_25.png)
 
 
 (pseudo-step)
 
 ---
 
-![](./step_images/step_26.png)
+![](step_images/step_26.png)
 
 ```yaml
 - name: "step_26"
@@ -377,7 +377,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_27.png)
+![](step_images/step_27.png)
 
 ```yaml
 - name: "step_27"
@@ -393,7 +393,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_28.png)
+![](step_images/step_28.png)
 
 ```[disabled]yaml
 - name: "step_28"
@@ -411,7 +411,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_29.png)
+![](step_images/step_29.png)
 
 ```[disabled]yaml
 - name: "step_29"
@@ -429,7 +429,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_30.png)
+![](step_images/step_30.png)
 
 ```yaml
 - name: "step_30"
@@ -445,7 +445,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_31.png)
+![](step_images/step_31.png)
 
 ```[disabled]yaml
 - name: "step_31"
@@ -463,7 +463,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_31.1.png)
+![](step_images/step_31.1.png)
 
 ```[disabled]yaml
 - name: "step_31.1"
@@ -479,7 +479,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_32.png)
+![](step_images/step_32.png)
 
 ```[disabled]yaml
 - name: "step_32"
@@ -497,7 +497,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_32.1.png)
+![](step_images/step_32.1.png)
 ```[disabled]yaml
 - name: "step_32.1"
   component: Qubes Domains
@@ -512,22 +512,22 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ---
 
-![](./step_images/step_33.png)
+![](step_images/step_33.png)
 
 ---
 
-![](./step_images/step_34.png)
+![](step_images/step_34.png)
 
 ---
 
-![](./step_images/step_35.png)
+![](step_images/step_35.png)
 
 ---
 
-![](./step_images/step_36.png)
+![](step_images/step_36.png)
 
 ---
 
-![](./step_images/step_37.png)
+![](step_images/step_37.png)
 
 ---
