@@ -3,6 +3,11 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk
 
 import os
+import dbus
+import dbus.service
+from dbus.mainloop.glib import DBusGMainLoop
+import subprocess
+
 
 CSS = b"""
 @keyframes animated-highlight {
@@ -41,6 +46,13 @@ class NautilusMock(Gtk.Window):
         self.set_style()
         self.present()
         self.fix_image_relative_imports()
+        self.setup_dbus_service()
+        self.tutorial_next_step("ui_ready")
+
+    def setup_dbus_service(self):
+        print("setting up dbus servie")
+        DBusGMainLoop(set_as_default=True)
+        NautilusMockDBUSService(self)
 
     @Gtk.Template.Callback()
     def on_click_picture(self, widget, event):
@@ -75,17 +87,47 @@ class NautilusMock(Gtk.Window):
     @Gtk.Template.Callback()
     def on_show_menu(self, *args, **kwargs):
         print("activate menu")
-        self.picture.get_style_context().remove_class("highlighted")
+        self.remove_highlight(self.picture)
 
     @Gtk.Template.Callback()
     def on_hide_menu(self, *args, **kwargs):
         print("deactivate menu")
-        self.picture.get_style_context().add_class("highlighted")
+        self.highlight_picture()
 
     @Gtk.Template.Callback()
     def on_copy_to_appvm(self, *args, **kwargs):
         print("clicked right option")
-        self.picture.get_style_context().remove_class("highlighted")
+        self.remove_highlight(self.picture)
+        self.tutorial_next_step("copied-to-appvm")
+        install_path = os.path.dirname(__file__)
+        image_path = os.path.join(install_path, "images", "picture.png")
+        subprocess.Popen(["qvm-copy", image_path])
+
+
+
+    def highlight_picture(self):
+        self.add_highlight(self.picture)
+
+    def add_highlight(self, widget):
+        widget.get_style_context().add_class("highlighted")
+
+    def remove_highlight(self, widget):
+        widget.get_style_context().remove_class("highlighted")
+
+    def tutorial_next_step(self, identifier):
+        subprocess.Popen(["qrexec-client-vm", "dom0",
+                          f"tutorial.NextStep+{identifier}"])
+
+class NautilusMockDBUSService(dbus.service.Object):
+    def __init__(self, nautilus_mock):
+        self.nautilus_mock = nautilus_mock
+        bus_name = dbus.service.BusName("org.qubes.tutorial.mock_filemanager",
+                                        bus=dbus.SessionBus())
+        dbus.service.Object.__init__(self, bus_name, '/')
+
+    @dbus.service.method('org.qubes.tutorial.mock_filemanager')
+    def highlight_picture_file(self):
+        self.nautilus_mock.highlight_picture()
 
 def main():
     NautilusMock()

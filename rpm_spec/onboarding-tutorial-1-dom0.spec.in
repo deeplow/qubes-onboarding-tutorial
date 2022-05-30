@@ -23,6 +23,8 @@ BuildArch: noarch
 
 BuildRequires:  make
 
+Requires:  qubes-tutorial >= 1.0.2
+
 Provides:   qubes-tutorial-onboarding-1 = %{version}-%{release}
 
 %prep

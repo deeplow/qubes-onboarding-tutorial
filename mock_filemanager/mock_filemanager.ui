@@ -52,9 +52,6 @@
                     <property name="pixbuf">images/work_picture_picture.png</property>
                   </object>
                 </child>
-                <style>
-                  <class name="highlighted"/>
-                </style>
               </object>
               <packing>
                 <property name="expand">False</property>

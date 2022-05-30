@@ -133,16 +133,13 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_9"
   transitions:
-   - interaction: "qubes-events:work:domain-start"
-     step: "step_10"
+    - interaction: "qubes-qrexec-tutorial.NextStep+ui_ready:work:dom0"
+      step: "step_10"
   ui:
     - type: "step_information"
       title: "Wait for the qube to start..."
       text: "Starting a qube is like starting a computer. It takes some seconds."
       has_ok_btn: "False"
-  #teardown:
-  #  - type: "wait" # wait for some seconds for the UI to show
-  #    time: "3"
 ```
 
 ---
@@ -270,7 +267,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_18"
   transitions:
    - interaction: "tutorial:next"
-     step: "step_21"
+     step: "step_19"
   ui:
     - type: "current_task"
       task_number: "3"
@@ -281,23 +278,32 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 
 ![](step_images/step_19.png)
 
-```[disabled]yaml
+```yaml
 - name: "step_19"
+  setup:
+    - type: "qvm-run"
+      vm_name: "work"
+      command: 'gdbus call --session --dest org.qubes.tutorial.mock_filemanager --object-path "/" --method org.qubes.tutorial.mock_filemanager.highlight_picture_file'
   transitions:
-    # user right-clicks
-    - interaction: "vm-interaction:work"
-      step: "step_20"
+    #- interaction: "qrexec-gui:opened"
+    #  step: "step_21"
+    - interaction: "qubes-qrexec-tutorial.NextStep+copied-to-appvm:work:dom0"
+      step: "step_21"
   ui:
     - type: "step_information"
-      text: "right click picture"
-      image: "right click picture"
+      title: "right click picture"
+      text: "right-click » Copy To AppVM..."
+      #image: "right click picture"
+      has_ok_btn: "False"
 ```
 
 ---
 
 ![](step_images/step_20.png)
 
-```[disabled]yaml
+Removed since this was merged with the previous step
+
+```[removed]yaml
 - name: "step_20"
   transitions:
    - interaction: "qrexec-gui:opened"
