@@ -41,7 +41,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       title: "Compartments you start with"
       template: "custom_ui/step_1.ui"
       next_button: "I get it »"
-      back_button: "<- previous"
+      back_button: "‹ previous"
 ```
 
 ---
@@ -61,7 +61,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
       title: "Your mission"
       template: "custom_ui/step_3.ui"
       next_button: "I'm ready!"
-      back_button: "<- previous"
+      back_button: "‹ previous"
 ```
 
 ---
