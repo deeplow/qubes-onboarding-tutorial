@@ -185,10 +185,13 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 - name: "step_12"
   setup:
     - component: "qubes_menu"
-      function: "do_show_tutorial_path_to_app"
+      function: "do_show_tutorial_path_to_app_override_exec"
       parameters:
         vm_name: "personal"
         app_name: "Files"
+        # open file manager and notify of next step otherwise it's hard to know
+        # exactly when the file manager actually opens
+        override_exec: 'qvm-run personal "qubes-tutorial-filemanager-launch-notify"'
   transitions:
    - interaction: "qubes_menu:personal:Files"
      step: "step_15"
@@ -216,7 +219,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_15"
   transitions:
-    - interaction: "qubes-events:personal:domain-start"
+    - interaction: "qubes-qrexec-tutorial.NextStep+opened_nautilus:personal:dom0"
       step: "step_16"
   ui:
     - type: "step_information"
