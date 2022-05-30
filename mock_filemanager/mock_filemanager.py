@@ -43,12 +43,19 @@ class NautilusMock(Gtk.Window):
 
     def __init__(self):
         super().__init__()
-        self.set_style()
-        self.present()
-        self.fix_image_relative_imports()
+        self.user_interaction_allowed = False
+
+        # setup dom0 <-> mock_filemanager communication
         self.setup_dbus_service()
         self.tutorial_next_step("ui_ready")
-        self.user_interaction_allowed = False
+
+        # setup window
+        self.set_style()
+        self.move(0, 0)
+        self.set_title("Home")
+        self.set_resizable(False)
+        self.fix_image_relative_imports()
+        self.present()
 
     def allow_user_interaction(self):
         self.user_interaction_allowed = True
