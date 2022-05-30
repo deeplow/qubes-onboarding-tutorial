@@ -515,9 +515,17 @@ ui:
 
 ```yaml
 name: "step_30"
+setup:
+  - component: "qubes_domains"
+    function: "do_show_tutorial_path"
+    parameters:
+      vm_name: "personal"
+      action_name: "shutdown"
 transitions:
   - interaction: "tutorial:next"
     step: "step_31"
+  - interaction: "qubes_domains:open"
+    step: "step_31.1"
 ui:
   - type: "step_information"
     title: "Closing windows is not enough"
@@ -531,12 +539,6 @@ ui:
 
 ```yaml
 name: "step_31"
-setup:
-  - component: "qubes_domains"
-    function: "do_show_tutorial_path"
-    parameters:
-      vm_name: "personal"
-      action_name: "shutdown"
 transitions:
   - interaction: "qubes_domains:open"
     step: "step_31.1"
