@@ -104,6 +104,7 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
     - type: "qubes-menu-highlight"
       vm_name: "work"
       app_name: "Files"
+      override_exec: "qvm-run -q -a --service -- work qubes.StartApp+org.gnome.Terminal"
   transitions:
    - interaction: "qubes-menu:work:Files"
      step: "step_9"
