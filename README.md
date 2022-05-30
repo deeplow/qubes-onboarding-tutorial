@@ -11,10 +11,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "start"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_2"
-   - interaction: "tutorial:back"
-     step: "end"
+    - interaction: "tutorial:next"
+      step: "step_2"
+    - interaction: "tutorial:back"
+      step: "end"
   ui:
     - type: "modal"
       title: ""
@@ -30,10 +30,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_2"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_3"
-   - interaction: "tutorial:back"
-     step: "start"
+    - interaction: "tutorial:next"
+      step: "step_3"
+    - interaction: "tutorial:back"
+      step: "start"
   ui:
     - type: "modal"
       title: "Compartments you start with"
@@ -49,10 +49,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_3"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_4"
-   - interaction: "tutorial:back"
-     step: "step_2"
+    - interaction: "tutorial:next"
+      step: "step_4"
+    - interaction: "tutorial:back"
+      step: "step_2"
   ui:
     - type: "modal"
       title: "Your mission"
@@ -68,8 +68,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_4"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_5"
+    - interaction: "tutorial:next"
+      step: "step_5"
   ui:
     - type: "current_task"
       task_number: "1"
@@ -83,8 +83,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_5"
   transitions:
-   - interaction: "qubes_menu:open"
-     step: "step_6"
+    - interaction: "qubes_menu:open"
+      step: "step_6"
   ui:
     - type: "step_information_pointing"
       title: "Open \"Q\" menu"
@@ -153,8 +153,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_10"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_11"
+    - interaction: "tutorial:next"
+      step: "step_11"
   ui:
     - type: "current_task"
       task_number: "2"
@@ -168,8 +168,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_11"
   transitions:
-   - interaction: "qubes_menu:open"
-     step: "step_12"
+    - interaction: "qubes_menu:open"
+      step: "step_12"
   ui:
     - type: "step_information_pointing"
       title: "Open \"Q\" menu"
@@ -195,8 +195,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
         # exactly when the file manager actually opens
         override_exec: 'qvm-run personal "/usr/lib/qubes-onboarding-tutorial-1/exec_cmd_wrapper.py nautilus ~/"'
   transitions:
-   - interaction: "qubes_menu:personal:Files"
-     step: "step_15"
+    - interaction: "qubes_menu:personal:Files"
+      step: "step_15"
   teardown:
     - component: "qubes_menu"
       function: "do_hide_tutorial_path"
@@ -241,8 +241,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_16"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_17"
+    - interaction: "tutorial:next"
+      step: "step_17"
   ui:
     - type: "step_information"
       title: "Each qube is isolated"
@@ -259,8 +259,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_17"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_18"
+    - interaction: "tutorial:next"
+      step: "step_18"
   ui:
     - type: "modal"
       title: "colored borders"
@@ -277,8 +277,8 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
 ```yaml
 - name: "step_18"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_19"
+    - interaction: "tutorial:next"
+      step: "step_19"
   ui:
     - type: "current_task"
       task_number: "3"
@@ -332,8 +332,8 @@ Removed since this was merged with the previous step
 ```yaml
 - name: "step_21"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_22"
+    - interaction: "tutorial:next"
+      step: "step_22"
   ui:
     - type: "modal"
       title: "Administrator prompt"
@@ -394,8 +394,8 @@ Copy the file and wait for the qrexec agent to open
 ```yaml
 - name: "step_26"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_27"
+    - interaction: "tutorial:next"
+      step: "step_27"
   ui:
     - type: "step_information"
       title: "File has been copied"
@@ -411,8 +411,8 @@ Copy the file and wait for the qrexec agent to open
 ```yaml
 - name: "step_27"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_28"
+    - interaction: "tutorial:next"
+      step: "step_28"
   ui:
     - type: "current_task"
       task_number: "4"
@@ -469,8 +469,8 @@ The user closes another window
 ```yaml
 - name: "step_30"
   transitions:
-   - interaction: "tutorial:next"
-     step: "step_31"
+    - interaction: "tutorial:next"
+      step: "step_31"
   ui:
     - type: "step_information"
       title: "Closing windows is not enough"
@@ -571,8 +571,8 @@ The user closes another window
     - component: "qubes_domains"
       function: "do_hide_tutorial_path"
   transitions:
-   - interaction: "tutorial:next"
-     step: "end"
+    - interaction: "tutorial:next"
+      step: "end"
   ui:
     - type: "modal"
       title: "Mission complete!"
