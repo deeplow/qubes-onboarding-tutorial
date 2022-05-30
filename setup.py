@@ -7,8 +7,8 @@ def read_file(file_name):
     return open(os.path.join(os.path.dirname(__file__), file_name)).read()
 
 setuptools.setup(
-    name='onboarding-tutorial-1-bundled-programs',
-    version='1.0.0',
+    name='tutorial_1_bundled_programs',
+    version=read_file('version').strip(),
     author='deeplow',
     author_email='deeplower at protonmail.com',
     description='Bundled Programs for Qubes Integrated Tutorial 1',
