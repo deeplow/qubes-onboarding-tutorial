@@ -86,10 +86,12 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
    - interaction: "qubes_menu:open"
      step: "step_6"
   ui:
-    - type: "step_information"
+    - type: "step_information_pointing"
       title: "Open \"Q\" menu"
       text: "To see the available qubes and their applications"
-      has_ok_btn: "False"
+      x_coord: "0"
+      y_coord: "0"
+      point_to_corner: "top left"
     #- type: "hotspot"
     #  location: "top left of screen"
 ```
@@ -108,8 +110,10 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
         app_name: "Files"
         override_exec: "qvm-run -q work '/usr/lib/qubes-onboarding-tutorial-1/exec_cmd_wrapper.py qubes-tutorial-mock-filemanager'"
   transitions:
-   - interaction: "qubes_menu:work:Files"
-     step: "step_9"
+    - interaction: "qubes_menu:work:Files"
+      step: "step_9"
+    - interaction: "qubes_menu:hide"
+      step: "step_5"
   teardown:
     - component: "qubes_menu"
       function: "do_hide_tutorial_path"
@@ -169,10 +173,12 @@ summit 2021 ([link](https://youtube.com/watch?v=y3V_V0Vllas)).
    - interaction: "qubes_menu:open"
      step: "step_12"
   ui:
-    - type: "step_information"
+    - type: "step_information_pointing"
       title: "Open \"Q\" menu"
       text: "To see the available qubes and their applications"
-      has_ok_btn: "False"
+      x_coord: "0"
+      y_coord: "0"
+      point_to_corner: "top left"
     #- type: "hotspot"
     #  location: "top left of screen"
 ```
@@ -507,10 +513,12 @@ The user closes another window
    - interaction: "qubes_domains:open"
      step: "step_31.1"
   ui:
-    - type: "step_information"
+    - type: "step_information_pointing"
       title: "Shutdown the qubes"
       text: "Shutdown \"personal\""
-      has_ok_btn: "False"
+      x_coord: "-70"
+      y_coord: "0"
+      point_to_corner: "top right"
     #- type: "hotspot"
     #  location: "Qubes Domains widget"
 ```
@@ -525,10 +533,6 @@ The user closes another window
    - interaction: "qubes-events:personal:domain-shutdown"
      step: "step_32"
   ui:
-    - type: "step_information"
-      title: "Shutdown the qubes"
-      text: "Shutdown \"personal\""
-      has_ok_btn: "False"
   teardown:
     - component: "qubes_domains"
       function: "do_hide_tutorial_path"
@@ -550,10 +554,12 @@ The user closes another window
     - interaction: "qubes_domains:open"
       step: "step_32.1"
   ui:
-    - type: "step_information"
+    - type: "step_information_pointing"
       title: "Shutdown the qubes"
       text: "Shutdown \"work\""
-      has_ok_btn: "False"
+      x_coord: "-70"
+      y_coord: "0"
+      point_to_corner: "top right"
     #- type: "hotspot"
     #  location: "Qubes Domains widget"
 ```
@@ -567,10 +573,12 @@ The user closes another window
    - interaction: "qubes-events:work:domain-shutdown"
      step: "end"
   ui:
-    - type: "step_information"
+    - type: "step_information_pointing"
       title: "Shutdown the qubes"
       text: "Shutdown \"work\""
-      has_ok_btn: "False"
+      x_coord: "-70"
+      y_coord: "0"
+      point_to_corner: "top right"
   teardown:
     - component: "qubes_domains"
       function: "do_hide_tutorial_path"
